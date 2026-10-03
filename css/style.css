@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Body {
+  background-color: #eef4ee;
+  color: #1f3324;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.6;
+  padding: 16px;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.TituloHeader {
+  color: #2f6b3a;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+
+.ParagrafoHeader {
+  color: #4f7a58;
+  margin-top: 4px;
+}
+
+/* Tabela */
+.Section-tb {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.Tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #9dbfa2;
+}
+
+.Tabela th,
+.Tabela td {
+  border: 1px solid #b7d3b9;
+  padding: 12px 14px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* Coluna dos títulos */
+.Tabela th {
+  background-color: #6a9f72;
+  color: #ffffff;
+  width: 18%;
+}
+
+/* Coluna dos textos */
+.Tabela td {
+  background-color: #ffffff;
+}
+
+.Tabela tr:nth-child(even) td {
+  background-color: #f1f7f1;
+}
+
+/* Coluna das imagens */
+.Tabela td:last-child {
+  width: 26%;
+}
+
+.Tabela td[colspan] {
+  width: auto;
+}
+
+/* Títulos de seção (A, B, C...) */
+.Tabela .Secao th {
+  background-color: #2f6b3a;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: auto;
+}
+
+/* Imagens da tabela */
+.Tabela img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #b7d3b9;
+}
+
+/* Fontes */
+.Tabela .Fontes ul {
+  padding-left: 20px;
+}
+
+.Tabela .Fontes li {
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.Tabela .Fontes a {
+  color: #2f6b3a;
+}
+
+/* =========================================
+   DESENVOLVEDOR E ORIENTADORES
+   ========================================= */
+
+.Tabela td.Equipe {
+  text-align: center;
+  padding: 28px 14px;
+  background-color: #ffffff;
+}
+
+.Tabela tr:nth-child(even) td.Equipe {
+  background-color: #f1f7f1;
+}
+
+/* Títulos da equipe */
+.Equipe .dev {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Equipe h1.dev {
+  color: #2f6b3a;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.Equipe h2.dev {
+  color: #2f6b3a;
+  font-size: 1.25rem;
+  margin-top: 20px;
+}
+
+.Equipe h3.dev {
+  color: #4f7a58;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   FOTO DO DESENVOLVEDOR
+   ========================================= */
+
+.Tabela .foto-dev {
+  display: block;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #6a9f72;
+  margin: 0 auto 24px auto;
+}
+
+/* =========================================
+   ORIENTADORES
+   ========================================= */
+
+/* Título "Orientadores" sempre centralizado */
+.Equipe h1.dev {
+  text-align: center;
+  width: 100%;
+}
+
+/* Cada orientador */
+.Equipe .orientador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 650px;
+
+  margin: 28px auto 0 auto;
+  padding: 20px;
+
+  gap: 30px;
+
+  background-color: #f1f7f1;
+  border: 1px solid #b7d3b9;
+  border-radius: 12px;
+}
+
+/* Foto do orientador */
+.Equipe .orientador .foto-dev {
+  width: 160px;
+  height: 160px;
+
+  margin: 0;
+  flex-shrink: 0;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 4px solid #6a9f72;
+}
+
+/* Área com nome e cargo */
+.Equipe .orientador-info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Nome */
+.Equipe .orientador-info h2.dev {
+  color: #2f6b3a;
+  font-size: 1.35rem;
+
+  margin: 0 0 6px 0;
+}
+
+/* Cargo */
+.Equipe .orientador-info h3.dev {
+  color: #4f7a58;
+  font-size: 1rem;
+  font-weight: normal;
+
+  margin: 0;
+}
+
+/* =========================================
+   CELULAR E TELAS PEQUENAS
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .Body {
+    padding: 10px;
+  }
+
+  .Tabela,
+  .Tabela tbody,
+  .Tabela tr,
+  .Tabela th,
+  .Tabela td {
+    display: block;
+    width: 100%;
+  }
+
+  .Tabela {
+    border: none;
+    background: none;
+  }
+
+  .Tabela tr {
+    margin-bottom: 16px;
+    border: 1px solid #6a9f72;
+  }
+
+  .Tabela .Secao {
+    border: none;
+    margin-top: 22px;
+  }
+
+  .Tabela th,
+  .Tabela td {
+    border: none;
+  }
+
+  .Tabela td {
+    border-top: 1px solid #b7d3b9;
+  }
+
+  .Tabela td:last-child {
+    width: 100%;
+  }
+
+  .Tabela img {
+    max-width: 220px;
+  }
+
+  /* Foto do desenvolvedor */
+  .Tabela .foto-dev {
+    width: 170px;
+    height: 170px;
+  }
+
+  /* =========================================
+     ORIENTADORES NO CELULAR
+     ========================================= */
+
+  /* Continua lado a lado */
+  .Equipe .orientador {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 15px;
+  }
+
+  .Equipe .orientador .foto-dev {
+    width: 120px;
+    height: 120px;
+
+    margin: 0;
+  }
+
+  .Equipe .orientador-info {
+    text-align: left;
+  }
+
+  .Equipe .orientador-info h2.dev {
+    font-size: 1.1rem;
+  }
+
+  .Equipe .orientador-info h3.dev {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+   ========================================= */
+
+@media (max-width: 450px) {
+
+  .Equipe .orientador {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .Equipe .orientador .foto-dev {
+    width: 95px;
+    height: 95px;
+  }
+
+  .Equipe .orientador-info h2.dev {
+    font-size: 1rem;
+  }
+
+  .Equipe .orientador-info h3.dev {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+}
